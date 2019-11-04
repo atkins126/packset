@@ -39,8 +39,7 @@ module.exports = function(webpackEnv, entry) {
                 ['@babel/plugin-proposal-class-properties', {loose: true}],
                 '@babel/plugin-transform-runtime',
                 ['@babel/plugin-transform-destructuring', {loose: false}],
-                ['@babel/plugin-proposal-object-rest-spread', {useBuiltIns: true}],
-                ['import', {'libraryName': 'antd', 'libraryDirectory': 'es', 'style': 'css'}],
+                ['@babel/plugin-proposal-object-rest-spread', {useBuiltIns: true}]
               ]
             }
           }

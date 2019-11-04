@@ -4,12 +4,13 @@ const fs = require('fs-extra');
 const path = require('path');
 
 if (process.argv.length < 3) {
-  console.log('usage:\n  create-packset-app <project-directory>');
+  console.log('\nusage:\n  create-packset-app <project-directory>');
   return;
 }
 
 if (process.argv[2] === '-v' || process.argv[2] === '--version') {
-  console.log(require('../package.json').version);
+  let version = require('../package.json').version;
+  console.log(`\ncreate-packset-app v${version}`);
   return;
 }
 
@@ -21,7 +22,7 @@ function createPacksetApp(projectName) {
   let dest = path.resolve(fs.realpathSync(process.cwd()), projectName);
 
   if (fs.existsSync(dest)) {
-    console.log(`${projectName} directory exists`);
+    console.log(`\n${projectName} directory exists`);
     return false;
   }
   fs.mkdirSync(dest, {recursive: true});
@@ -40,5 +41,5 @@ function createPacksetApp(projectName) {
   packageJsonText = packageJsonText.replace(/"name":\s*".*"/, `"name": "${projectName}"`);
   fs.writeFileSync(packageJsonFile, packageJsonText, 'utf8');
 
-  console.log(`project ${projectName} has been created`);
+  console.log(`\nproject ${projectName} has been created`);
 }
