@@ -1,0 +1,24 @@
+{
+  "name": "create-packset-app",
+  "version": "0.1.0",
+  "description": "create-packset-app",
+  "author": "rilyu",
+  "license": "MIT",
+  "keywords": [
+    "react"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rilyu/packset.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rilyu/packset/issues"
+  },
+  "homepage": "https://github.com/rilyu/packset/tree/master/packages/create-packset-app#readme",
+  "bin": {
+    "create-packset-app": "./bin/index.js"
+  },
+  "dependencies": {
+    "fs-extra": "^8.1.0"
+  }
+}
