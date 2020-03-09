@@ -133,8 +133,7 @@ class PacksetHelper {
       }
     });
     html = html
-      .replace('%PUBLIC_URL%/', publicPath)
-      .replace('%PUBLIC_URL%', publicPath)
+      .replace(/\%PUBLIC_URL\%(\/)?/g, publicPath)
       .replace('<div id="root"></div>', jsText)
       .replace('</head>', cssText + '</head>');
 

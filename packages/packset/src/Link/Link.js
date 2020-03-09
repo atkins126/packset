@@ -10,7 +10,7 @@ export default class Link extends React.Component {
 
   render() {
     let {href, ...others} = this.props;
-    return <a href={this.context.resolveUrl(href)} {...others} />;
+    return <a rel='noopener noreferrer' href={this.context.resolveUrl(href)} {...others} />;
   }
 
 }

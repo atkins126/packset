@@ -1,6 +1,6 @@
 {
   "name": "packset",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "packset",
   "main": "lib/index.js",
   "scripts": {
